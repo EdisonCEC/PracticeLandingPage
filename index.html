@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#08090d" />
+<title>Practice Landing Page</title>
+<meta name="description" content="Nimbus unifies your code, docs and data into one intelligent canvas. Automate the busywork, ship breakthrough work 10x faster." />
+
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="fonts.css" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%236366f1'/%3E%3Cpath d='M28 62c0-16 10-26 22-26s22 10 22 26' stroke='white' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='66' r='7' fill='white'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ambient background -->
+<div class="aurora" aria-hidden="true">
+  <span class="aurora__blob aurora__blob--1"></span>
+  <span class="aurora__blob aurora__blob--2"></span>
+  <span class="aurora__blob aurora__blob--3"></span>
+  <span class="aurora__grid"></span>
+  <span class="aurora__noise"></span>
+</div>
+
+<div class="scroll-progress" aria-hidden="true"><span data-progress-bar></span></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="#top" aria-label="Nimbus home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none"><path d="M28 62c0-16 10-26 22-26s22 10 22 26" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><circle cx="50" cy="66" r="7" fill="currentColor"/></svg>
+      </span>
+      <span class="brand__name">Nimbus</span>
+    </a>
+
+    <nav class="nav" data-nav aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#features">Features</a></li>
+        <li><a class="nav__link" href="#showcase">Showcase</a></li>
+        <li><a class="nav__link" href="#pricing">Pricing</a></li>
+        <li><a class="nav__link" href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--ghost btn--sm" href="#">Sign in</a>
+      <a class="btn btn--primary btn--sm" href="#cta">
+        Get started
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav>
+    <a href="#features">Features</a>
+    <a href="#showcase">Showcase</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <div class="mobile-nav__cta">
+      <a class="btn btn--ghost" href="#">Sign in</a>
+      <a class="btn btn--primary" href="#cta">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <a class="pill" href="#showcase">
+        <span class="pill__badge">New</span>
+        <span class="pill__text">Nimbus Agents 2.0 is here</span>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+
+      <h1 class="hero__title">
+        Turn scattered work into
+        <span class="gradient-text">one intelligent flow</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Nimbus connects your code, docs, data and teammates in a single AI-native canvas.
+        Automate the busywork, surface the signal, and ship the thing that matters.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="#cta">
+          Start building free
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--soft btn--lg" href="#showcase">
+          <svg class="icon icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+          Watch the tour
+        </a>
+      </div>
+
+      <ul class="hero__meta">
+        <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Free forever tier</li>
+        <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No credit card</li>
+        <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>SOC 2 Type II</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual" data-tilt>
+      <div class="mock" role="img" aria-label="Nimbus dashboard preview">
+        <div class="mock__topbar">
+          <span class="mock__dots"><i></i><i></i><i></i></span>
+          <span class="mock__title">nimbus.app / workspace / velocity</span>
+          <span class="mock__live"><i></i>live</span>
+        </div>
+
+        <div class="mock__body">
+          <aside class="mock__side">
+            <span class="mock__nav-item is-active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v6H4zM14 5h6v6h-6zM4 15h6v4H4zM14 15h6v4h-6z"/></svg></span>
+            <span class="mock__nav-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>
+            <span class="mock__nav-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 3 4-6"/></svg></span>
+            <span class="mock__nav-item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 4-3.5 7-8 8-4.5-1-8-4-8-8V7z"/></svg></span>
+          </aside>
+
+          <div class="mock__main">
+            <div class="mock__head">
+              <div>
+                <span class="mock__kicker">Team velocity</span>
+                <strong class="mock__h">+38.4%</strong>
+              </div>
+              <div class="mock__chips"><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="mock__chart">
+              <svg viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#6366f1" stop-opacity=".55"/>
+                    <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="chartStroke" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#22d3ee"/>
+                    <stop offset="100%" stop-color="#a855f7"/>
+                  </linearGradient>
+                </defs>
+                <path class="chart-area" d="M0,96 L40,86 L80,90 L120,64 L160,72 L200,40 L240,50 L280,22 L320,30 L320,120 L0,120 Z" fill="url(#chartFill)"/>
+                <path class="chart-line" d="M0,96 L40,86 L80,90 L120,64 L160,72 L200,40 L240,50 L280,22 L320,30" fill="none" stroke="url(#chartStroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="mock__stats">
+              <div class="mock__stat"><span>Deploys</span><strong>1,284</strong><em class="up">+12%</em></div>
+              <div class="mock__stat"><span>Cycle time</span><strong>4.2h</strong><em class="up">−31%</em></div>
+              <div class="mock__stat"><span>Errors</span><strong>0.4%</strong><em class="down">−0.6%</em></div>
+            </div>
+
+            <div class="mock__rows">
+              <div class="mock__row"><span class="avatar avatar--a">MK</span><span class="mock__row-txt">Agent closed 14 issues</span><span class="tag tag--ok">Done</span></div>
+              <div class="mock__row"><span class="avatar avatar--b">RS</span><span class="mock__row-txt">Search index rebuilt</span><span class="tag tag--run">Running</span></div>
+              <div class="mock__row"><span class="avatar avatar--c">JT</span><span class="mock__row-txt">Docs synced to v4</span><span class="tag tag--ok">Done</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__glow" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="marquee" aria-label="Trusted by teams at">
+    <div class="marquee__track" data-marquee>
+      <div class="marquee__group">
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/></svg>Vertex</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>Horizon</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="18" rx="2"/><rect x="14" y="3" width="7" height="18" rx="2"/></svg>Layers</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg>Arcadia</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Quanta</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>Orbit</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l7-14 7 14z"/></svg>Summit</span>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/></svg>Vertex</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>Horizon</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="18" rx="2"/><rect x="14" y="3" width="7" height="18" rx="2"/></svg>Layers</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg>Arcadia</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Quanta</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>Orbit</span>
+        <span class="logo-word"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19l7-14 7 14z"/></svg>Summit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" id="features">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>
+        Platform
+      </span>
+      <h2 class="section__title">Everything you need to <span class="gradient-text">move as one</span></h2>
+      <p class="section__lead">One platform replacing the patchwork of trackers, dashboards and chat threads that slow your team down.</p>
+    </header>
+
+    <div class="bento">
+      <article class="card card--lg" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4z"/><path d="M18.5 16.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div>
+        <h3 class="card__title">Agentic automations</h3>
+        <p class="card__text">Describe the outcome in plain language. Nimbus agents plan, execute and report — routing issues, triaging feedback and closing loops overnight.</p>
+        <div class="card__viz card__viz--agents">
+          <div class="agent-row"><span class="agent-dot agent-dot--a"></span><span class="agent-bar" style="--w:82%"></span><span class="agent-tag">triaged</span></div>
+          <div class="agent-row"><span class="agent-dot agent-dot--b"></span><span class="agent-bar" style="--w:64%"></span><span class="agent-tag">merged</span></div>
+          <div class="agent-row"><span class="agent-dot agent-dot--c"></span><span class="agent-bar" style="--w:46%"></span><span class="agent-tag">drafted</span></div>
+          <div class="agent-row"><span class="agent-dot agent-dot--d"></span><span class="agent-bar" style="--w:92%"></span><span class="agent-tag">deployed</span></div>
+        </div>
+      </article>
+
+      <article class="card" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></div>
+        <h3 class="card__title">Universal search</h3>
+        <p class="card__text">One query across code, tickets, docs and chat. Semantic ranking, saved searches and instant previews.</p>
+      </article>
+
+      <article class="card" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-6 4 3 4-6 5 4"/><path d="M3 21h18"/></svg></div>
+        <h3 class="card__title">Live signal, not vanity metrics</h3>
+        <p class="card__text">Decision-grade dashboards that update in real time and explain <em>why</em> a number moved.</p>
+        <div class="card__pulse"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </article>
+
+      <article class="card" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 4-3.5 7.5-8 8-4.5-.5-8-4-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3 class="card__title">Enterprise-grade by default</h3>
+        <p class="card__text">SOC 2 Type II, SSO/SCIM, granular permissions, EU data residency and full audit trails.</p>
+      </article>
+
+      <article class="card" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V6a2 2 0 012-2h9l5 5v10a2 2 0 01-2 2z"/><path d="M14 4v5h5"/><path d="M9 13h6M9 17h4"/></svg></div>
+        <h3 class="card__title">Context-aware editor</h3>
+        <p class="card__text">Draft, refactor and review inside the canvas. Suggestions that understand your whole codebase, not just the open file.</p>
+      </article>
+
+      <article class="card card--wide card--accent" data-reveal data-spotlight>
+        <div class="card__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5"/><path d="M15 15.2c2.9-.4 6 1.2 6 3.8"/></svg></div>
+        <div class="card__body">
+          <h3 class="card__title">A canvas built for humans</h3>
+          <p class="card__text">Live cursors, inline comments and presence. Collaborate on the same context without scheduling another meeting about it.</p>
+        </div>
+        <div class="card__avatars">
+          <div class="card__avatars-row">
+            <span class="avatar avatar--a">MK</span>
+            <span class="avatar avatar--b">RS</span>
+            <span class="avatar avatar--c">JT</span>
+            <span class="avatar avatar--d">+9</span>
+          </div>
+          <span class="card__avatars-note">12 teammates editing right now</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section section--steps" id="how">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M4 6h16M4 18h10"/></svg>
+        How it works
+      </span>
+      <h2 class="section__title">Three steps to <span class="gradient-text">full flow</span></h2>
+    </header>
+
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step__num">01</span>
+        <span class="step__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4"/></svg></span>
+        <h3 class="step__title">Connect everything</h3>
+        <p class="step__text">One-click connectors for GitHub, Linear, Notion, Slack and 60+ more — or push your own API in seconds.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num">02</span>
+        <span class="step__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 3 3 8-8"/><path d="M14 7h6v6"/></svg></span>
+        <h3 class="step__title">Describe the outcome</h3>
+        <p class="step__text">Tell Nimbus what "done" looks like. Agents draft the plan, show you the steps and wait for a thumbs-up.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step__num">03</span>
+        <span class="step__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5 4.8 1.3 6.9L12 17.8 5.7 21.1 7 14.2l-5-4.8 7-.9z"/></svg></span>
+        <h3 class="step__title">Ship, then watch it run</h3>
+        <p class="step__text">Everything executes in the background with full visibility. You approve once and keep moving.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE / TABS ============ -->
+<section class="section" id="showcase">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8"/></svg>
+        Showcase
+      </span>
+      <h2 class="section__title">See it <span class="gradient-text">in action</span></h2>
+    </header>
+
+    <div class="tabs" data-tabs data-reveal>
+      <div class="tabs__list" role="tablist" aria-label="Product areas">
+        <button class="tabs__tab is-active" role="tab" id="tab-dash" aria-selected="true" aria-controls="panel-dash" data-tab="dash">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 3 4-6"/></svg>
+          Dashboards
+        </button>
+        <button class="tabs__tab" role="tab" id="tab-auto" aria-selected="false" aria-controls="panel-auto" data-tab="auto" tabindex="-1">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+          Automations
+        </button>
+        <button class="tabs__tab" role="tab" id="tab-int" aria-selected="false" aria-controls="panel-int" data-tab="int" tabindex="-1">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H6a3 3 0 00-3 3v3M15 3h3a3 3 0 013 3v3M9 21H6a3 3 0 01-3-3v-3M15 21h3a3 3 0 003-3v-3"/><path d="M8 12h8"/></svg>
+          Integrations
+        </button>
+      </div>
+
+      <div class="tabs__panels">
+        <div class="tabs__panel is-active" id="panel-dash" role="tabpanel" aria-labelledby="tab-dash" data-panel="dash">
+          <div class="showcase">
+            <div class="showcase__copy">
+              <h3>Dashboards that explain themselves</h3>
+              <p>Every chart is backed by live data and plain-language context. Hover any metric to see the drivers, the outliers and the commit that caused the change.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Real-time streaming updates</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Automatic anomaly callouts</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Shareable read-only views</li>
+              </ul>
+            </div>
+            <div class="showcase__visual">
+              <div class="glass-panel glass-panel--chart">
+                <div class="glass-panel__head"><span>Deployment frequency</span><span class="tag tag--run">Week 32</span></div>
+                <div class="bars">
+                  <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:66%"></i>
+                  <i style="--h:58%"></i><i style="--h:74%"></i><i style="--h:69%"></i><i style="--h:88%"></i>
+                  <i style="--h:80%"></i><i style="--h:96%"></i><i style="--h:90%"></i><i style="--h:100%"></i>
+                </div>
+                <div class="glass-panel__foot"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="panel-auto" role="tabpanel" aria-labelledby="tab-auto" data-panel="auto" hidden>
+          <div class="showcase">
+            <div class="showcase__copy">
+              <h3>Automations that think before they act</h3>
+              <p>Chain triggers, conditions and AI steps into reliable workflows. Nimbus handles retries, approvals and edge cases so your pipelines just keep flowing.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Natural-language workflow builder</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Human-in-the-loop approvals</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Full run history and replay</li>
+              </ul>
+            </div>
+            <div class="showcase__visual">
+              <div class="glass-panel">
+                <div class="flow">
+                  <div class="flow__node"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Issue created</span></div>
+                  <span class="flow__line"></span>
+                  <div class="flow__node"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><span>AI triage</span></div>
+                  <span class="flow__line"></span>
+                  <div class="flow__node"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 4-3.5 7.5-8 8-4.5-.5-8-4-8-8V7z"/></svg><span>Auto-assign</span></div>
+                  <span class="flow__line"></span>
+                  <div class="flow__node flow__node--done"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Resolve</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabs__panel" id="panel-int" role="tabpanel" aria-labelledby="tab-int" data-panel="int" hidden>
+          <div class="showcase">
+            <div class="showcase__copy">
+              <h3>Plugs into the stack you already love</h3>
+              <p>Two hundred plus integrations, a typed SDK and a webhooks API. Your data stays yours — bring your own storage or let Nimbus host it.</p>
+              <ul class="check-list">
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Typed SDK &amp; CLI</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Self-hosted or cloud</li>
+                <li><svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Realtime webhooks</li>
+              </ul>
+            </div>
+            <div class="showcase__visual">
+              <div class="glass-panel">
+                <div class="chips-grid">
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/></svg>GitHub</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>Linear</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8"/></svg>Notion</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4z"/></svg>Slack</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>Figma</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Jira</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5v10l-9 5-9-5V7z"/></svg>Postgres</span>
+                  <span class="chip"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 8h6M9 12h6"/></svg>Drive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section section--stats">
+  <div class="container">
+    <div class="stats" data-reveal>
+      <div class="stat">
+        <strong class="stat__value" data-counter="12" data-suffix="k+">0</strong>
+        <span class="stat__label">Active teams</span>
+      </div>
+      <div class="stat">
+        <strong class="stat__value" data-counter="38" data-suffix="M">0</strong>
+        <span class="stat__label">Tasks automated</span>
+      </div>
+      <div class="stat">
+        <strong class="stat__value" data-counter="4.8" data-decimals="1" data-suffix="x">0</strong>
+        <span class="stat__label">Faster delivery</span>
+      </div>
+      <div class="stat">
+        <strong class="stat__value" data-counter="99.99" data-decimals="2" data-suffix="%">0</strong>
+        <span class="stat__label">Uptime SLA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 10h8M8 14h5M12 3a9 9 0 100 18h1a8 8 0 000-16z"/></svg>
+        Testimonials
+      </span>
+      <h2 class="section__title">Loved by <span class="gradient-text">builders</span></h2>
+    </header>
+
+    <div class="quotes">
+      <figure class="quote" data-reveal data-spotlight>
+        <svg class="icon quote__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v2H4M19 7h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v2h-3"/></svg>
+        <blockquote>We replaced four tools with Nimbus in a week. Our release cycle dropped from three days to four hours and nobody misses the old stack.</blockquote>
+        <figcaption class="quote__by">
+          <span class="avatar avatar--a">MK</span>
+          <span><strong>Marta Kowalski</strong><em>VP Engineering, Vertex</em></span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote" data-reveal data-spotlight>
+        <svg class="icon quote__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v2H4M19 7h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v2h-3"/></svg>
+        <blockquote>The agents are shockingly good. They close 60% of inbound issues before a human even opens them — and they explain every action.</blockquote>
+        <figcaption class="quote__by">
+          <span class="avatar avatar--b">RS</span>
+          <span><strong>Daniel Reyes</strong><em>Head of Product, Layers</em></span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote" data-reveal data-spotlight>
+        <svg class="icon quote__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H5a2 2 0 00-2 2v4a2 2 0 002 2h2v2H4M19 7h-4a2 2 0 00-2 2v4a2 2 0 002 2h2v2h-3"/></svg>
+        <blockquote>Onboarding took an afternoon. By Friday the whole company had built their own automations — no admin, no tickets, no Slack archaeology.</blockquote>
+        <figcaption class="quote__by">
+          <span class="avatar avatar--c">JT</span>
+          <span><strong>Priya Nair</strong><em>COO, Quanta</em></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12V8H6a2 2 0 010-4h12v4"/><path d="M4 6v12a2 2 0 002 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4z"/></svg>
+        Pricing
+      </span>
+      <h2 class="section__title">Simple pricing that <span class="gradient-text">scales with you</span></h2>
+      <p class="section__lead">Start free. Upgrade when your team outgrows it. No surprise overages.</p>
+
+      <div class="toggle" data-billing-toggle role="group" aria-label="Billing period">
+        <button type="button" class="toggle__btn is-active" data-period="monthly" aria-pressed="true">Monthly</button>
+        <button type="button" class="toggle__btn" data-period="yearly" aria-pressed="false">Yearly <em>−20%</em></button>
+        <span class="toggle__thumb" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <div class="plans">
+      <article class="plan" data-reveal data-spotlight>
+        <h3 class="plan__name">Starter</h3>
+        <p class="plan__desc">For solo builders finding their rhythm.</p>
+        <div class="plan__price"><span class="plan__currency">$</span><strong data-price data-monthly="0" data-yearly="0">0</strong><span class="plan__period">/mo</span></div>
+        <a class="btn btn--soft btn--full" href="#cta">Start free</a>
+        <ul class="plan__list">
+          <li>3 projects</li>
+          <li>Unlimited collaborators</li>
+          <li>50 automations / month</li>
+          <li>Community support</li>
+        </ul>
+      </article>
+
+      <article class="plan plan--featured" data-reveal data-spotlight>
+        <span class="plan__flag">Most popular</span>
+        <h3 class="plan__name">Pro</h3>
+        <p class="plan__desc">For teams shipping every single day.</p>
+        <div class="plan__price"><span class="plan__currency">$</span><strong data-price data-monthly="19" data-yearly="15">19</strong><span class="plan__period">/mo</span></div>
+        <a class="btn btn--primary btn--full" href="#cta">Start 14-day trial</a>
+        <ul class="plan__list">
+          <li>Unlimited projects</li>
+          <li>Unlimited automations</li>
+          <li>Nimbus Agents 2.0</li>
+          <li>Advanced analytics</li>
+          <li>Priority support</li>
+        </ul>
+      </article>
+
+      <article class="plan" data-reveal data-spotlight>
+        <h3 class="plan__name">Business</h3>
+        <p class="plan__desc">For organizations with serious scale &amp; compliance.</p>
+        <div class="plan__price"><span class="plan__currency">$</span><strong data-price data-monthly="49" data-yearly="39">49</strong><span class="plan__period">/mo</span></div>
+        <a class="btn btn--soft btn--full" href="#cta">Talk to sales</a>
+        <ul class="plan__list">
+          <li>Everything in Pro</li>
+          <li>SSO / SCIM provisioning</li>
+          <li>Self-hosted deployment</li>
+          <li>Audit logs &amp; residency</li>
+          <li>99.99% uptime SLA</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container container--narrow">
+    <header class="section__head" data-reveal>
+      <span class="eyebrow">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 113.5 2.3c-.6.3-1 .9-1 1.6v.4"/><path d="M12 17h.01"/></svg>
+        FAQ
+      </span>
+      <h2 class="section__title">Questions, <span class="gradient-text">answered</span></h2>
+    </header>
+
+    <div class="faq" data-accordion="single" data-reveal>
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>What exactly is Nimbus?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>Nimbus is an AI-native workspace that connects your code, docs, tickets and data into one shared context. On top of that context, you can build automations, dashboards and agents that actually execute work — not just answer questions about it.</p></div></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>Do I need a credit card to try it?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>No. The Starter plan is free forever and the Pro trial runs for 14 days without a card. We only ask for payment details when you decide to upgrade.</p></div></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>How does Nimbus handle our data?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>Everything is encrypted in transit and at rest, with optional EU or US data residency. Your data is never used to train shared models, and Business customers can self-host entirely. We're SOC 2 Type II certified and GDPR compliant.</p></div></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>Can the agents take actions without approval?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>You decide. Every automation has three modes: manual (you trigger it), supervised (agents draft, you approve) and autonomous (agents run inside guardrails you define). You can require approval for any step and get a full replay log of what happened.</p></div></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>Which tools does it integrate with?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>GitHub, GitLab, Linear, Jira, Notion, Slack, Figma, Google Drive, Snowflake, Postgres and 200+ more. If there's no native connector, the REST API, webhooks and our typed SDK let you build one yourself in minutes.</p></div></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__q" aria-expanded="false">
+          <span>What if we need to cancel?</span>
+          <svg class="icon faq__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a"><div class="faq__a-inner"><p>Cancel anytime from your billing settings — no emails, no retention calls. You keep read-only access to your workspace for 30 days, and you can export every table, doc and automation as JSON or Markdown whenever you like.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" id="cta">
+  <div class="container">
+    <div class="cta" data-reveal>
+      <div class="cta__glow" aria-hidden="true"></div>
+      <span class="eyebrow eyebrow--center">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+        Get started in minutes
+      </span>
+      <h2 class="cta__title">Give your team back<br /><span class="gradient-text">its best hours</span></h2>
+      <p class="cta__text">Join 12,000+ teams already shipping calmer, faster and with far fewer meetings about status.</p>
+      <form class="cta__form" data-cta-form novalidate>
+        <label class="sr-only" for="cta-email">Work email</label>
+        <input id="cta-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+        <button class="btn btn--primary" type="submit">
+          Start free
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="cta__note" data-cta-note>No credit card required · Free forever tier</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand" href="#top" aria-label="Nimbus home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 100 100" fill="none"><path d="M28 62c0-16 10-26 22-26s22 10 22 26" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><circle cx="50" cy="66" r="7" fill="currentColor"/></svg>
+          </span>
+          <span class="brand__name">Nimbus</span>
+        </a>
+        <p>The AI-native workspace for teams who would rather ship than status-report.</p>
+        <div class="socials">
+          <a href="#" aria-label="Nimbus on X"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+          <a href="#" aria-label="Nimbus on GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.2-4-2.2-6-2.7m12 5.2v-3.4a3 3 0 00-.9-2.4c2.9-.3 6-1.4 6-6.3a4.9 4.9 0 00-1.3-3.4 4.6 4.6 0 00-.1-3.4s-1-.3-3.4 1.3a11.6 11.6 0 00-6 0C7.7 2 6.7 2.3 6.7 2.3a4.6 4.6 0 00-.1 3.4A4.9 4.9 0 005.3 9c0 4.9 3 6 5.9 6.3a3 3 0 00-.9 2.4V21"/></svg></a>
+          <a href="#" aria-label="Nimbus on LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div class="site-footer__col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#showcase">Showcase</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#">Integrations</a>
+          <a href="#">Changelog</a>
+        </div>
+        <div class="site-footer__col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Customers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="site-footer__col">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">API reference</a>
+          <a href="#">Community</a>
+          <a href="#">Status</a>
+          <a href="#">Guides</a>
+        </div>
+        <div class="site-footer__col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Security</a>
+          <a href="#">DPA</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> Nimbus Labs, Inc. All rights reserved.</span>
+      <span class="site-footer__built">Designed &amp; built with care · <span class="dot"></span> Open code, mostly.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite">
+  <svg class="icon icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+  <span data-toast-text>You're on the list.</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "kill port 8080",
+            "detail": "Stop whatever is currently listening on port 8080",
+            "type": "process",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "Get-NetTCPConnection -LocalPort 8080 -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "serve: http://localhost:8080",
+            "detail": "Static server for the landing page",
+            "type": "process",
+            "command": "python",
+            "args": ["-u", "-m", "http.server", "8080", "--bind", "127.0.0.1"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "dependsOn": "kill port 8080",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "http-server",
+                "pattern": { "regexp": "^", "file": 1, "location": 2, "message": 3 },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "Serving HTTP on .* port \\d+"
+                }
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
